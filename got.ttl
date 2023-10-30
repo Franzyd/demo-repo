@@ -1,0 +1,223 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fhkb: <http://www.example.com/genealogy.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dbo: <https://dbpedia.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<Race> a rdfs:Class .
+foaf:Person rdfs:subClassOf <Race> .
+
+<First_Men> a rdfs:Class ;
+    rdfs:subClassOf <Race> ;
+    rdfs:seeAlso <Humans> ;
+    rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Human"^^xsd:anyURI .
+<Valyrian> a rdfs:Class ;
+    rdfs:subClassOf <Race> .
+
+<Age> a rdfs:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range rdfs:Datatype .
+
+<IsDead> a rdfs:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range rdfs:Datatype ;
+    rdfs:comment "Ressurections treated as not dead"^^xsd:string .
+
+<Rhaella_Targaryen> a <Valyrian> ;
+    foaf:nick "Princess", "Queen", "Dowager Queen" ;
+    dbo:birthDate "0246"^^xsd:gYear ;
+    dbo:birthPlace "King's Landing"^^xsd:string ;
+    <Age> "P38Y"^^xsd:duration ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasHusband <Aerys_II> ;
+    fhkb:hasSon <Viserys_Targaryen> ;
+    fhkb:hasDaughter <Daenerys_Targaryen> .
+
+<Aerys_II> a <Valyrian> ;
+    foaf:nick "Prince of Dragonstone", "Ser", "King of the Andals, the Rhoynar, and the First Men", "Lord of the Seven Kingdoms", "Protector of the Realm" ;
+    dbo:birthDate "0244"^^xsd:gYear ;
+    dbo:birthPlace "King's Landing"^^xsd:string ;
+    <Age> "P39Y"^^xsd:duration ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasWife <Rhaella_Targaryen> ;
+    fhkb:hasSon <Viserys_Targaryen> ;
+    fhkb:hasDaughter <Daenerys_Targaryen> .
+
+<Viserys_Targaryen> a <Valyrian> ;
+    foaf:nick "King of the Andals, the Rhoynar, and the First Men", "Lord of the Seven Kingdoms", "Protector of the Realm", "Prince of Dragonstone" ;
+    dbo:birthDate "0276"^^xsd:gYear ;
+    dbo:birthPlace "King's Landing"^^xsd:string ;
+    <Age> "P18Y"^^xsd:duration ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasMother <Rhaella_Targaryen> ;
+    fhkb:hasFather <Aerys_II> .
+
+<Daenerys_Targaryen> a <Valyrian> ;
+    foaf:nick "Khaleesi of the Great Grass Sea", "Breaker of Shackles", "Mother of Dragons", "Stormborn" ;
+    dbo:birthDate "0284"^^xsd:gYear ;
+    dbo:birthPlace "Dragonstone"^^xsd:string ;
+    <Age> "P24Y"^^xsd:duration ;
+    <IsDead> "false"^^xsd:bool ;
+    fhkb:hasMother <Rhaella_Targaryen> ;
+    fhkb:hasFather <Aerys_II> .
+
+<Rhaegar_Targaryen> a <Valyrian> ;
+    foaf:nick "Prince of Dragonstone", "Ser";
+    dbo:birthDate "0259"^^xsd:gYear ;
+    dbo:birthPlace "Summerhall"^^xsd:string ;
+    <Age> "P24Y"^^xsd:duration ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasSon <Jon_Snow> ;
+    fhkb:hasBrother <Viserys_Targaryen> ;
+    fhkb:hasSister <Daenerys_Targaryen> .
+
+<Lyanna_Stark> a <First_Men> ;
+    dbo:birthDate "0266"^^xsd:gYear ;
+    dbo:birthPlace "Winterfell"^^xsd:string ;
+    <Age> "P16Y"^^xsd:duration ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasSon <Jon_Snow> .
+
+<Jon_Snow> a <First_Men> ;
+    foaf:nick "Lord Snow", "The Bastard of Winterfell", "Lord Commander of the Night's Watch" ;
+    dbo:birthDate "0283"^^xsd:gYear ;
+    dbo:birthPlace "Tower of Joy, Dorne"^^xsd:string ;
+    <Age> "P24Y"^^xsd:duration ;
+    <IsDead> "false"^^xsd:bool ;
+    fhkb:hasMother <Lyanna_Stark> ;
+    fhkb:hasFather <Rhaegar_Targaryen> ;
+    <killed> [
+        a rdf:Bag ;
+        rdf:_1 <Daenerys_Targaryen> ;
+        rdf:_2 <Qhorin_Halfhand>
+    ] ;
+    rdfs:label "Jan Śnieg"^^xsd:string .
+    # <killed> <Daenerys_Targaryen> .
+
+<Arya_Stark> a foaf:Person ;
+    foaf:nick "Arya Underfoot";
+    dbo:birthDate "0289"^^xsd:gYear ;
+    dbo:birthPlace "Winterfell"^^xsd:string ;
+    <IsDead> "false"^^xsd:bool ;
+    fhkb:hasMother <Catelyn_Stark> ;
+    fhkb:hasFather <Eddard_Stark> ;
+    fhkb:hasSister <Sansa_Stark> ;
+    fhkb:hasBrother ( <Robb_Stark> <Bran_Stark> <Rickon_Stark> ) .
+    # fhkb:hasBrother <Robb_Stark> ;
+    # fhkb:hasBrother <Bran_Stark> ;
+    # fhkb:hasBrother <Rickon_Stark> .
+
+<Sansa_Stark> a foaf:Person ;
+    <IsDead> "false"^^xsd:bool ;
+    dbo:birthDate "0286"^^xsd:gYear ;
+    fhkb:hasMother <Catelyn_Stark> ;
+    fhkb:hasSister <Arya_Stark> ;
+    fhkb:hasBrother <Rob_Stark> ;
+    fhkb:hasBrother <Rickon_Stark> ;
+    fhkb:hasBrother <Bran_Stark> ;
+    fhkb:hasFather <Eddard_Stark> .
+
+<Bran_Stark> a foaf:Person ;
+    foaf:nick "The Winged Wolf";
+    dbo:birthDate "0290"^^xsd:gYear ;
+    <IsDead> "false"^^xsd:bool ;
+    fhkb:hasMother <Catelyn_Stark> ;
+    fhkb:hasFather <Eddard_Stark>;
+    fhkb:hasSister <Arya_Stark>;
+    fhkb:hasSister <Sansa_Stark>;
+    fhkb:hasBrother <Rob_Stark>;
+    fhkb:hasBrother <Rickon_Stark>.
+
+<Rickon_Stark> a foaf:Person ;
+    dbo:birthDate "0295"^^xsd:gYear ;
+    fhkb:hasMother <Catelyn_Stark> ;
+    fhkb:hasFather <Eddard_Stark> ;
+    fhkb:hasBrother <Bran_Stark> ;
+    fhkb:hasSister <Arya_Stark> ;
+    fhkb:hasSister <Sansa_Stark> ;
+    fhkb:hasBrother <Robb_Stark>.
+   
+<Catelyn_Stark> a foaf:Person ;
+    foaf:nick "Lady Stoneheart";
+    dbo:birthPlace "the Riverlands"^^xsd:string ;
+    fhkb:hasSon <Rob_Stark>;
+    fhkb:hasSon <Bran_Stark>;
+    fhkb:hasSon <Rickon_Stark>;
+    fhkb:hasDaughter <Arya_Stark>;
+    fhkb:hasDaughter <Sansa_Stark>;
+    fhkb:hasHusband <Eddard_Stark>.
+   
+<Eddard_Stark> a foaf:Person ;
+    <IsDead> "true"^^xsd:bool ;
+    dbo:birthDate "0263"^^xsd:gYear ;
+    dbo:birthPlace "Winterfell"^^xsd:string;
+    fhkb:hasWife <Catelyn_Stark> ;
+    fhkb:hasSister <Lyanna_Stark> ;
+    fhkb:hasSon <Rickon_Stark>;
+    fhkb:hasSon <Bran_Stark>;
+    fhkb:hasSon <Rob_Stark>;
+    fhkb:hasDaughter <Sansa_Stark> ;
+    fhkb:hasDaughter <Arya_Stark> .
+
+<Robb_Stark> a foaf:Person ;
+    <IsDead> "true"^^xsd:bool ;
+    foaf:nick "The Young Wolf" ;
+    dbo:birthDate "0283"^^xsd:gYear ;
+    dbo:birthPlace "Winterfell"^^xsd:string ;
+    fhkb:hasMother <Catelyn_Stark> ;
+    fhkb:hasFather <Eddard_Stark> ;
+    fhkb:hasSister <Arya_Stark> ;
+    fhkb:hasSister <Sansa_Stark> ;
+    fhkb:hasBrother <Bran_Stark> ;
+    fhkb:hasBrother <Rickon_Stark> .
+
+<Tywin_Lannister> a foaf:Person ;
+    <IsDead> "true"^^xsd:bool ;
+    dbo:birthDate "0242"^^xsd:gYear ;
+    dbo:birthPlace "Casterly Rock"^^xsd:string ;
+    fhkb:hasSon <Jaime_Lannister> ;
+    fhkb:hasSon <Tyrion_Lannister> ;
+    fhkb:hasDaughter <Cersei_lannister> ;
+    <killed_by> <Tyrion_Lannister> .
+
+<Jame_Lannister> a foaf:Person ;
+    dbo:birthDate "0266"^^xsd:gYear ;
+    dbo:birthPlace "Casterly Rock"^^xsd:string ;
+    fhkb:hasSon <Joffrey> ;
+    fhkb:hasWife <Cersei_lannister> ;
+    fhkb:hasFather <Tywin_Lannister> ;
+    <killed> <King_Robert> ;
+    <wounded> <Bran_Stark> .
+
+<Cersei_Lannister> a foaf:Person ;
+    dbo:birthDate "0266"^^xsd:gYear ;
+    dbo:birthPlace "Casterly Rock"^^xsd:string ;
+    fhkb:hasSon <Joffrey> ;
+    fhkb:hasFather <Tywin_Lannister> ;
+    fhkb:hasHusband <Jaime_lannister> ;
+    fhkb:hasBrother <Jaime_lannister> .
+    
+<Tyrion_Lannister> a foaf:Person ;
+    <IsDead> "false"^^xsd:bool ;
+    dbo:birthPlace "Casterly Rock"^^xsd:string ;
+    fhkb:hasFather <Tywin_Lannister> ;
+    <killed> <Tywin_Lannister> .
+
+<Joffrey> a foaf:Person ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasMother <Cersei_Lannister> ;
+    fhkb:hasFather <Jaime_Lannister> ;
+    <is_successor_to> <King_Robert> .
+<Stanis> a foaf:Person ;
+    fhkb:hasBrother <King_Robert> ;
+    fhkb:hasBrother <Renly> .
+    
+<Renly> a foaf:Person ;
+    fhkb:hasBrother <Stanis>;
+    fhkb:hasBrother <King_Robert> .
+
+<King_Robert> a foaf:Person ;
+    <IsDead> "true"^^xsd:bool ;
+    fhkb:hasBrother <Renly> ;
+    fhkb:hasBrother <Stanis> .
