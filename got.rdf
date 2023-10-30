@@ -36,7 +36,7 @@
     <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
     <fhkb:hasSon>
       <foaf:Person rdf:about="file:///app/Joffrey">
-        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
         >true</j.0:IsDead>
         <fhkb:hasMother>
           <foaf:Person rdf:about="file:///app/Cersei_Lannister">
@@ -46,7 +46,7 @@
             <fhkb:hasSon rdf:resource="file:///app/Joffrey"/>
             <fhkb:hasFather>
               <foaf:Person rdf:about="file:///app/Tywin_Lannister">
-                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                 >true</j.0:IsDead>
                 <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
                 >0242</dbo:birthDate>
@@ -54,7 +54,7 @@
                 <fhkb:hasSon rdf:resource="file:///app/Jaime_Lannister"/>
                 <fhkb:hasSon>
                   <foaf:Person rdf:about="file:///app/Tyrion_Lannister">
-                    <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                    <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                     >false</j.0:IsDead>
                     <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
                     <fhkb:hasFather rdf:resource="file:///app/Tywin_Lannister"/>
@@ -72,7 +72,7 @@
         <fhkb:hasFather rdf:resource="file:///app/Jaime_Lannister"/>
         <j.0:is_successor_to>
           <foaf:Person rdf:about="file:///app/King_Robert">
-            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >true</j.0:IsDead>
             <fhkb:hasBrother>
               <foaf:Person rdf:about="file:///app/Renly">
@@ -97,7 +97,7 @@
       <foaf:Person rdf:about="file:///app/Bran_Stark">
         <fhkb:hasSister>
           <foaf:Person rdf:about="file:///app/Sansa_Stark">
-            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
             >false</j.0:IsDead>
             <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
             >0286</dbo:birthDate>
@@ -120,7 +120,7 @@
                             <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
                             >0289</dbo:birthDate>
                             <dbo:birthPlace>Winterfell</dbo:birthPlace>
-                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                             >false</j.0:IsDead>
                             <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
                             <fhkb:hasFather rdf:resource="file:///app/Eddard_Stark"/>
@@ -135,7 +135,7 @@
                                 <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
                                 >0283</dbo:birthDate>
                                 <dbo:birthPlace>Winterfell</dbo:birthPlace>
-                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                                 >true</j.0:IsDead>
                                 <fhkb:hasSister rdf:resource="file:///app/Sansa_Stark"/>
                                 <fhkb:hasBrother rdf:resource="file:///app/Rickon_Stark"/>
@@ -144,7 +144,7 @@
                                 <fhkb:hasSister rdf:resource="file:///app/Arya_Stark"/>
                                 <fhkb:hasBrother rdf:resource="file:///app/Rickon_Stark"/>
                                 <foaf:nick>The Winged Wolf</foaf:nick>
-                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                                 >false</j.0:IsDead>
                                 <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
                                 <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
@@ -165,7 +165,7 @@
                         >0263</dbo:birthDate>
                         <fhkb:hasSon rdf:resource="file:///app/Rob_Stark"/>
                         <fhkb:hasWife rdf:resource="file:///app/Catelyn_Stark"/>
-                        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                         >true</j.0:IsDead>
                         <fhkb:hasSon rdf:resource="file:///app/Bran_Stark"/>
                         <fhkb:hasSon rdf:resource="file:///app/Rickon_Stark"/>
@@ -176,12 +176,12 @@
                             <dbo:birthPlace>Winterfell</dbo:birthPlace>
                             <j.0:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"
                             >P16Y</j.0:Age>
-                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                             >true</j.0:IsDead>
                             <fhkb:hasSon>
                               <j.0:First_Men rdf:about="file:///app/Jon_Snow">
                                 <fhkb:hasMother rdf:resource="file:///app/Lyanna_Stark"/>
-                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
                                 >false</j.0:IsDead>
                                 <foaf:nick>The Bastard of Winterfell</foaf:nick>
                                 <j.0:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"
@@ -191,7 +191,7 @@
                                   <j.0:Valyrian rdf:about="file:///app/Rhaegar_Targaryen">
                                     <foaf:nick>Prince of Dragonstone</foaf:nick>
                                     <j.0:IsDead rdf:datatype=
-                                    "http://www.w3.org/2001/XMLSchema#bool"
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
                                     >true</j.0:IsDead>
                                     <dbo:birthDate rdf:datatype=
                                     "http://www.w3.org/2001/XMLSchema#gYear"
@@ -205,7 +205,7 @@
                                         <fhkb:hasMother>
                                           <j.0:Valyrian rdf:about="file:///app/Rhaella_Targaryen">
                                             <j.0:IsDead rdf:datatype=
-                                            "http://www.w3.org/2001/XMLSchema#bool"
+                                            "http://www.w3.org/2001/XMLSchema#boolean"
                                             >true</j.0:IsDead>
                                             <foaf:nick>Dowager Queen</foaf:nick>
                                             <fhkb:hasSon rdf:resource="file:///app/Viserys_Targaryen"/>
@@ -220,7 +220,7 @@
                                                 <fhkb:hasWife rdf:resource="file:///app/Rhaella_Targaryen"/>
                                                 <foaf:nick>Lord of the Seven Kingdoms</foaf:nick>
                                                 <j.0:IsDead rdf:datatype=
-                                                "http://www.w3.org/2001/XMLSchema#bool"
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
                                                 >true</j.0:IsDead>
                                                 <foaf:nick>Protector of the Realm</foaf:nick>
                                                 <j.0:Age rdf:datatype=
@@ -242,7 +242,7 @@
                                                     >Dragonstone</dbo:birthPlace>
                                                     <j.0:IsDead
                                                      rdf:datatype=
-                                                    "http://www.w3.org/2001/XMLSchema#bool"
+                                                    "http://www.w3.org/2001/XMLSchema#boolean"
                                                     >false</j.0:IsDead>
                                                     <foaf:nick
                                                     >Breaker of Shackles</foaf:nick>
@@ -272,7 +272,7 @@
                                           </j.0:Valyrian>
                                         </fhkb:hasMother>
                                         <j.0:IsDead rdf:datatype=
-                                        "http://www.w3.org/2001/XMLSchema#bool"
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
                                         >true</j.0:IsDead>
                                         <foaf:nick>Lord of the Seven Kingdoms</foaf:nick>
                                         <foaf:nick>Prince of Dragonstone</foaf:nick>
