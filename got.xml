@@ -1,0 +1,331 @@
+﻿<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:fhkb="http://www.example.com/genealogy.owl#"
+    xmlns:dbo="https://dbpedia.org/ontology/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:j.0="file:///app/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdfs:Class rdf:about="file:///app/First_Men">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="file:///app/Race"/>
+    </rdfs:subClassOf>
+    <rdfs:seeAlso rdf:resource="file:///app/Humans"/>
+    <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >https://en.wikipedia.org/wiki/Human</rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="file:///app/Valyrian">
+    <rdfs:subClassOf rdf:resource="file:///app/Race"/>
+  </rdfs:Class>
+  <rdfs:Property rdf:about="file:///app/Age">
+    <rdfs:domain>
+      <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="file:///app/Race"/>
+      </rdf:Description>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdfs:Property>
+  <rdfs:Property rdf:about="file:///app/IsDead">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <rdfs:comment>Ressurections treated as not dead</rdfs:comment>
+  </rdfs:Property>
+  <foaf:Person rdf:about="file:///app/Jame_Lannister">
+    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+    >0266</dbo:birthDate>
+    <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
+    <fhkb:hasSon>
+      <foaf:Person rdf:about="file:///app/Joffrey">
+        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+        >true</j.0:IsDead>
+        <fhkb:hasMother>
+          <foaf:Person rdf:about="file:///app/Cersei_Lannister">
+            <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+            >0266</dbo:birthDate>
+            <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
+            <fhkb:hasSon rdf:resource="file:///app/Joffrey"/>
+            <fhkb:hasFather>
+              <foaf:Person rdf:about="file:///app/Tywin_Lannister">
+                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                >true</j.0:IsDead>
+                <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                >0242</dbo:birthDate>
+                <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
+                <fhkb:hasSon rdf:resource="file:///app/Jaime_Lannister"/>
+                <fhkb:hasSon>
+                  <foaf:Person rdf:about="file:///app/Tyrion_Lannister">
+                    <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                    >false</j.0:IsDead>
+                    <dbo:birthPlace>Casterly Rock</dbo:birthPlace>
+                    <fhkb:hasFather rdf:resource="file:///app/Tywin_Lannister"/>
+                    <j.0:killed rdf:resource="file:///app/Tywin_Lannister"/>
+                  </foaf:Person>
+                </fhkb:hasSon>
+                <fhkb:hasDaughter rdf:resource="file:///app/Cersei_lannister"/>
+                <j.0:killed_by rdf:resource="file:///app/Tyrion_Lannister"/>
+              </foaf:Person>
+            </fhkb:hasFather>
+            <fhkb:hasHusband rdf:resource="file:///app/Jaime_lannister"/>
+            <fhkb:hasBrother rdf:resource="file:///app/Jaime_lannister"/>
+          </foaf:Person>
+        </fhkb:hasMother>
+        <fhkb:hasFather rdf:resource="file:///app/Jaime_Lannister"/>
+        <j.0:is_successor_to>
+          <foaf:Person rdf:about="file:///app/King_Robert">
+            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+            >true</j.0:IsDead>
+            <fhkb:hasBrother>
+              <foaf:Person rdf:about="file:///app/Renly">
+                <fhkb:hasBrother>
+                  <foaf:Person rdf:about="file:///app/Stanis">
+                    <fhkb:hasBrother rdf:resource="file:///app/King_Robert"/>
+                    <fhkb:hasBrother rdf:resource="file:///app/Renly"/>
+                  </foaf:Person>
+                </fhkb:hasBrother>
+                <fhkb:hasBrother rdf:resource="file:///app/King_Robert"/>
+              </foaf:Person>
+            </fhkb:hasBrother>
+            <fhkb:hasBrother rdf:resource="file:///app/Stanis"/>
+          </foaf:Person>
+        </j.0:is_successor_to>
+      </foaf:Person>
+    </fhkb:hasSon>
+    <fhkb:hasWife rdf:resource="file:///app/Cersei_lannister"/>
+    <fhkb:hasFather rdf:resource="file:///app/Tywin_Lannister"/>
+    <j.0:killed rdf:resource="file:///app/King_Robert"/>
+    <j.0:wounded>
+      <foaf:Person rdf:about="file:///app/Bran_Stark">
+        <fhkb:hasSister>
+          <foaf:Person rdf:about="file:///app/Sansa_Stark">
+            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+            >false</j.0:IsDead>
+            <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+            >0286</dbo:birthDate>
+            <fhkb:hasMother>
+              <foaf:Person rdf:about="file:///app/Catelyn_Stark">
+                <foaf:nick>Lady Stoneheart</foaf:nick>
+                <dbo:birthPlace>the Riverlands</dbo:birthPlace>
+                <fhkb:hasSon rdf:resource="file:///app/Rob_Stark"/>
+                <fhkb:hasSon rdf:resource="file:///app/Bran_Stark"/>
+                <fhkb:hasSon>
+                  <foaf:Person rdf:about="file:///app/Rickon_Stark">
+                    <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                    >0295</dbo:birthDate>
+                    <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
+                    <fhkb:hasFather>
+                      <foaf:Person rdf:about="file:///app/Eddard_Stark">
+                        <fhkb:hasDaughter>
+                          <foaf:Person rdf:about="file:///app/Arya_Stark">
+                            <foaf:nick>Arya Underfoot</foaf:nick>
+                            <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                            >0289</dbo:birthDate>
+                            <dbo:birthPlace>Winterfell</dbo:birthPlace>
+                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                            >false</j.0:IsDead>
+                            <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
+                            <fhkb:hasFather rdf:resource="file:///app/Eddard_Stark"/>
+                            <fhkb:hasSister rdf:resource="file:///app/Sansa_Stark"/>
+                            <fhkb:hasBrother rdf:parseType="Collection">
+                              <foaf:Person rdf:about="file:///app/Robb_Stark">
+                                <fhkb:hasFather rdf:resource="file:///app/Eddard_Stark"/>
+                                <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
+                                <fhkb:hasSister rdf:resource="file:///app/Arya_Stark"/>
+                                <foaf:nick>The Young Wolf</foaf:nick>
+                                <fhkb:hasBrother rdf:resource="file:///app/Bran_Stark"/>
+                                <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                                >0283</dbo:birthDate>
+                                <dbo:birthPlace>Winterfell</dbo:birthPlace>
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                >true</j.0:IsDead>
+                                <fhkb:hasSister rdf:resource="file:///app/Sansa_Stark"/>
+                                <fhkb:hasBrother rdf:resource="file:///app/Rickon_Stark"/>
+                              </foaf:Person>
+                              <foaf:Person rdf:about="file:///app/Bran_Stark">
+                                <fhkb:hasSister rdf:resource="file:///app/Arya_Stark"/>
+                                <fhkb:hasBrother rdf:resource="file:///app/Rickon_Stark"/>
+                                <foaf:nick>The Winged Wolf</foaf:nick>
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                >false</j.0:IsDead>
+                                <fhkb:hasMother rdf:resource="file:///app/Catelyn_Stark"/>
+                                <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                                >0290</dbo:birthDate>
+                                <fhkb:hasBrother rdf:resource="file:///app/Rob_Stark"/>
+                                <fhkb:hasFather rdf:resource="file:///app/Eddard_Stark"/>
+                              </foaf:Person>
+                              <foaf:Person rdf:about="file:///app/Rickon_Stark">
+                                <fhkb:hasBrother rdf:resource="file:///app/Bran_Stark"/>
+                                <fhkb:hasSister rdf:resource="file:///app/Arya_Stark"/>
+                                <fhkb:hasSister rdf:resource="file:///app/Sansa_Stark"/>
+                                <fhkb:hasBrother rdf:resource="file:///app/Robb_Stark"/>
+                              </foaf:Person>
+                            </fhkb:hasBrother>
+                          </foaf:Person>
+                        </fhkb:hasDaughter>
+                        <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                        >0263</dbo:birthDate>
+                        <fhkb:hasSon rdf:resource="file:///app/Rob_Stark"/>
+                        <fhkb:hasWife rdf:resource="file:///app/Catelyn_Stark"/>
+                        <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                        >true</j.0:IsDead>
+                        <fhkb:hasSon rdf:resource="file:///app/Bran_Stark"/>
+                        <fhkb:hasSon rdf:resource="file:///app/Rickon_Stark"/>
+                        <fhkb:hasSister>
+                          <j.0:First_Men rdf:about="file:///app/Lyanna_Stark">
+                            <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                            >0266</dbo:birthDate>
+                            <dbo:birthPlace>Winterfell</dbo:birthPlace>
+                            <j.0:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"
+                            >P16Y</j.0:Age>
+                            <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                            >true</j.0:IsDead>
+                            <fhkb:hasSon>
+                              <j.0:First_Men rdf:about="file:///app/Jon_Snow">
+                                <fhkb:hasMother rdf:resource="file:///app/Lyanna_Stark"/>
+                                <j.0:IsDead rdf:datatype="http://www.w3.org/2001/XMLSchema#bool"
+                                >false</j.0:IsDead>
+                                <foaf:nick>The Bastard of Winterfell</foaf:nick>
+                                <j.0:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"
+                                >P24Y</j.0:Age>
+                                <rdfs:label>Jan Śnieg</rdfs:label>
+                                <fhkb:hasFather>
+                                  <j.0:Valyrian rdf:about="file:///app/Rhaegar_Targaryen">
+                                    <foaf:nick>Prince of Dragonstone</foaf:nick>
+                                    <j.0:IsDead rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#bool"
+                                    >true</j.0:IsDead>
+                                    <dbo:birthDate rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#gYear"
+                                    >0259</dbo:birthDate>
+                                    <fhkb:hasBrother>
+                                      <j.0:Valyrian rdf:about="file:///app/Viserys_Targaryen">
+                                        <foaf:nick>Protector of the Realm</foaf:nick>
+                                        <j.0:Age rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#duration"
+                                        >P18Y</j.0:Age>
+                                        <fhkb:hasMother>
+                                          <j.0:Valyrian rdf:about="file:///app/Rhaella_Targaryen">
+                                            <j.0:IsDead rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#bool"
+                                            >true</j.0:IsDead>
+                                            <foaf:nick>Dowager Queen</foaf:nick>
+                                            <fhkb:hasSon rdf:resource="file:///app/Viserys_Targaryen"/>
+                                            <foaf:nick>Queen</foaf:nick>
+                                            <foaf:nick>Princess</foaf:nick>
+                                            <j.0:Age rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#duration"
+                                            >P38Y</j.0:Age>
+                                            <dbo:birthPlace>King's Landing</dbo:birthPlace>
+                                            <fhkb:hasHusband>
+                                              <j.0:Valyrian rdf:about="file:///app/Aerys_II">
+                                                <fhkb:hasWife rdf:resource="file:///app/Rhaella_Targaryen"/>
+                                                <foaf:nick>Lord of the Seven Kingdoms</foaf:nick>
+                                                <j.0:IsDead rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#bool"
+                                                >true</j.0:IsDead>
+                                                <foaf:nick>Protector of the Realm</foaf:nick>
+                                                <j.0:Age rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#duration"
+                                                >P39Y</j.0:Age>
+                                                <foaf:nick>Ser</foaf:nick>
+                                                <foaf:nick>King of the Andals, the Rhoynar, and the First Men</foaf:nick>
+                                                <fhkb:hasSon rdf:resource="file:///app/Viserys_Targaryen"/>
+                                                <dbo:birthDate
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#gYear"
+                                                >0244</dbo:birthDate>
+                                                <fhkb:hasDaughter>
+                                                  <j.0:Valyrian rdf:about="file:///app/Daenerys_Targaryen">
+                                                    <fhkb:hasFather rdf:resource="file:///app/Aerys_II"/>
+                                                    <foaf:nick
+                                                    >Khaleesi of the Great Grass Sea</foaf:nick>
+                                                    <dbo:birthPlace
+                                                    >Dragonstone</dbo:birthPlace>
+                                                    <j.0:IsDead
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#bool"
+                                                    >false</j.0:IsDead>
+                                                    <foaf:nick
+                                                    >Breaker of Shackles</foaf:nick>
+                                                    <foaf:nick
+                                                    >Stormborn</foaf:nick>
+                                                    <foaf:nick
+                                                    >Mother of Dragons</foaf:nick>
+                                                    <j.0:Age rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#duration"
+                                                    >P24Y</j.0:Age>
+                                                    <dbo:birthDate
+                                                     rdf:datatype=
+                                                    "http://www.w3.org/2001/XMLSchema#gYear"
+                                                    >0284</dbo:birthDate>
+                                                    <fhkb:hasMother rdf:resource="file:///app/Rhaella_Targaryen"/>
+                                                  </j.0:Valyrian>
+                                                </fhkb:hasDaughter>
+                                                <foaf:nick>Prince of Dragonstone</foaf:nick>
+                                                <dbo:birthPlace
+                                                >King's Landing</dbo:birthPlace>
+                                              </j.0:Valyrian>
+                                            </fhkb:hasHusband>
+                                            <dbo:birthDate rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#gYear"
+                                            >0246</dbo:birthDate>
+                                            <fhkb:hasDaughter rdf:resource="file:///app/Daenerys_Targaryen"/>
+                                          </j.0:Valyrian>
+                                        </fhkb:hasMother>
+                                        <j.0:IsDead rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#bool"
+                                        >true</j.0:IsDead>
+                                        <foaf:nick>Lord of the Seven Kingdoms</foaf:nick>
+                                        <foaf:nick>Prince of Dragonstone</foaf:nick>
+                                        <dbo:birthDate rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#gYear"
+                                        >0276</dbo:birthDate>
+                                        <fhkb:hasFather rdf:resource="file:///app/Aerys_II"/>
+                                        <dbo:birthPlace>King's Landing</dbo:birthPlace>
+                                        <foaf:nick>King of the Andals, the Rhoynar, and the First Men</foaf:nick>
+                                      </j.0:Valyrian>
+                                    </fhkb:hasBrother>
+                                    <fhkb:hasSon rdf:resource="file:///app/Jon_Snow"/>
+                                    <dbo:birthPlace>Summerhall</dbo:birthPlace>
+                                    <fhkb:hasSister rdf:resource="file:///app/Daenerys_Targaryen"/>
+                                    <foaf:nick>Ser</foaf:nick>
+                                    <j.0:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#duration"
+                                    >P24Y</j.0:Age>
+                                  </j.0:Valyrian>
+                                </fhkb:hasFather>
+                                <foaf:nick>Lord Snow</foaf:nick>
+                                <foaf:nick>Lord Commander of the Night's Watch</foaf:nick>
+                                <j.0:killed>
+                                  <rdf:Bag>
+                                    <rdf:li rdf:resource="file:///app/Daenerys_Targaryen"/>
+                                    <rdf:li rdf:resource="file:///app/Qhorin_Halfhand"/>
+                                  </rdf:Bag>
+                                </j.0:killed>
+                                <dbo:birthPlace>Tower of Joy, Dorne</dbo:birthPlace>
+                                <dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"
+                                >0283</dbo:birthDate>
+                              </j.0:First_Men>
+                            </fhkb:hasSon>
+                          </j.0:First_Men>
+                        </fhkb:hasSister>
+                        <dbo:birthPlace>Winterfell</dbo:birthPlace>
+                        <fhkb:hasDaughter rdf:resource="file:///app/Sansa_Stark"/>
+                      </foaf:Person>
+                    </fhkb:hasFather>
+                  </foaf:Person>
+                </fhkb:hasSon>
+                <fhkb:hasDaughter rdf:resource="file:///app/Arya_Stark"/>
+                <fhkb:hasDaughter rdf:resource="file:///app/Sansa_Stark"/>
+                <fhkb:hasHusband rdf:resource="file:///app/Eddard_Stark"/>
+              </foaf:Person>
+            </fhkb:hasMother>
+            <fhkb:hasSister rdf:resource="file:///app/Arya_Stark"/>
+            <fhkb:hasBrother rdf:resource="file:///app/Rob_Stark"/>
+            <fhkb:hasBrother rdf:resource="file:///app/Rickon_Stark"/>
+            <fhkb:hasBrother rdf:resource="file:///app/Bran_Stark"/>
+            <fhkb:hasFather rdf:resource="file:///app/Eddard_Stark"/>
+          </foaf:Person>
+        </fhkb:hasSister>
+      </foaf:Person>
+    </j.0:wounded>
+  </foaf:Person>
+</rdf:RDF>
